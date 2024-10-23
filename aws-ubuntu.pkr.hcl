@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = var.name
+  ami_name      = var.ami_name
   instance_type = var.instance_type
   region        = var.region
   source_ami_filter {
