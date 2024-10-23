@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Packer Build
         run: |
-          cd CUSTOM_AMI_PACKER/ami-Creation
+          cd Workspaces/Packer/Custom_AMI_Packer/CUSTOM_AMI_PACKER/ami-Creation
           packer init aws-ubuntu.pkr.hcl
           packer validate aws-ubuntu.pkr.hcl
           packer build aws-ubuntu.pkr.hcl
