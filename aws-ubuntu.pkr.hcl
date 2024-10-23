@@ -11,6 +11,7 @@ source "amazon-ebs" "ubuntu" {
   ami_name      = var.ami_name
   instance_type = var.instance_type
   region        = var.region
+
   source_ami_filter {
     filters = {
       name                = var.ami_filters
@@ -18,8 +19,9 @@ source "amazon-ebs" "ubuntu" {
       virtualization-type = var.ami_filters
     }
     most_recent = true
-    owners      = ["099720109477"]
+    owners      = var.ami_owners
   }
+
   ssh_username = "ubuntu"
 }
 build {
