@@ -14,9 +14,9 @@ source "amazon-ebs" "ubuntu" {
 
   source_ami_filter {
     filters = {
-      name                = var.ami_filters
-      root-device-type    = var.ami_filters
-      virtualization-type = var.ami_filters
+      name                = "${var.ami_filters}"
+      root-device-type    = "${var.ami_filters}"
+      virtualization-type = "${var.ami_filters}"
     }
     most_recent = true
     owners      = var.ami_owners
@@ -24,6 +24,8 @@ source "amazon-ebs" "ubuntu" {
 
   ssh_username = "ubuntu"
 }
+
+
 build {
   name = "learn-packer"
   sources = [
