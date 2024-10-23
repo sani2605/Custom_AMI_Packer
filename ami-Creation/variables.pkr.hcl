@@ -1,6 +1,6 @@
 variable "ami_name" {
   type    = string
-  default = "learn-packer-linux-aws-test"
+  default = "packer-ubuntu-aws-test"
 }
 
 variable "instance_type" {
