@@ -8,14 +8,14 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "learn-packer-linux-aws-ubuntutest"
-  instance_type = "t2.micro"
-  region        = "ap-southeast-2"
+  ami_name      = var.name
+  instance_type = var.instance_type
+  region        = var.region
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
-      root-device-type    = "ebs"
-      virtualization-type = "hvm"
+      name                = var.ami_filters
+      root-device-type    = var.ami_filters
+      virtualization-type = var.ami_filters
     }
     most_recent = true
     owners      = ["099720109477"]
