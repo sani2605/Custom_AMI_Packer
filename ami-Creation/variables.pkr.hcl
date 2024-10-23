@@ -10,13 +10,13 @@ variable "instance_type" {
 
 variable "region" {
   type    = string
-  default = "ap-southeast-2"
+  default = "us-east-1"
 }
 
 variable "ami_filters" {
   type = map(string)
   default = {
-    name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
+    name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-arm64-server-20240927"
     root-device-type    = "ebs"
     virtualization-type = "hvm"
   }

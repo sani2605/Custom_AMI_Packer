@@ -30,10 +30,11 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: "ap-southeast-2" # Optionally include this if you're using a specific region
+          aws-region: "us-east-1" # Optionally include this if you're using a specific region
 
       - name: Run Packer Build
         run: |
-          packer init aws-ubuntu.pkr.hcl
-          packer validate aws-ubuntu.pkr.hcl
-          packer build aws-ubuntu.pkr.hcl
+          cd Packer_GITHUB_ACTION/Aws_Custom_AMI_Creation
+          packer init ubuntu.pkr.hcl
+          packer validate ubuntu.pkr.hcl
+          packer build ubuntu.pkr.hcl
