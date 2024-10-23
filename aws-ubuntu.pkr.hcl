@@ -38,6 +38,6 @@ build {
       "sudo apt-get upgrade -y",
       "sudo apt-get install -y nginx"
     ]
-  }  */
+  }   */
 }
 
